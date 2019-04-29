@@ -1,0 +1,118 @@
+/* CSS for FCC Build a Technical Documentation Page 
+Elizabeth Hildreth
+4/29/2019*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 67vw;
+    align-items: left;
+    margin-left: 28%;
+    margin-top: auto;
+}
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+#grumpy-cat {
+    width: 95%;   
+}
+
+#firefox-icon {
+    width: 200px;
+    margin-left: 30px;
+}
+
+#code {
+    border-left: 6px solid blue;
+    background-color: lightblue;
+}
+#badCode {
+    border-left: 6px solid red;
+    background-color: lightpink;
+}
+mark {
+    background-color: lightgray;
+}
+
+/* User Story #14: On regular sized devices (laptops, desktops), 
+the element with id="navbar" should be shown on the left side of 
+the screen and should always be visible to the user */
+nav {  
+    justify-content: flex-start;
+    position: fixed;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25vw;
+    background-color: #cac8c8;
+    border: 1px solid #555;
+    float: left;
+    position: fixed;
+    margin-left: 2px;
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+}
+
+nav li a {
+    display: block;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+nav header {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+/* change link color on hover */
+nav li a:hover {
+    background-color: #555555;
+    color: white;
+}
+
+
+/* User Story #15: My Technical Documentation page should use at 
+least one media query */
+@media (max-width: 520px) {
+    body {
+        flex-wrap: wrap;
+        position: relative;
+    }
+    nav {
+        position: relative;
+        justify-content: center;
+        font-size: 12px;
+    }
+    main {
+        position: relative;
+        flex-wrap: wrap;    
+        width: 100vw;
+        align-items: left;        
+        margin: 5% 2% 5% 2%;        
+        justify-content: center;
+    }
+    nav ul {
+        position: relative;
+        width: 93vw;
+        display: flex;
+        flex-direction: column;
+    }
+}
